@@ -1,0 +1,1 @@
+chỉ chạy trên môi trường nodeJS, không thể chạy trên browser 

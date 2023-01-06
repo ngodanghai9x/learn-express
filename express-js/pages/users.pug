@@ -1,0 +1,24 @@
+extends ./layout
+
+block content
+  h2 Create user
+  form(action="/users/create" method="POST" enctype="multipart/form-data") 
+    .mb-3
+      label.form-label(for='name') Name
+      input#name.form-control(type='text'  name="name")
+    .mb-3
+      label.form-label(for='age') Age
+      input#age.form-control(type='number' name="age")
+    .mb-3
+      label.form-label(for='photos') Photos
+      input#photos.form-control(type='file' name="photos" multiple)
+    button.btn.btn-primary(type='submit') Create
+  hr
+  ul
+    each user in userList
+      li= user.name + ', ' + user.age
+      li= 'name ' + user.name + ',age ' + user.age
+      li Name=#{user.name}, Age=#{user.age}
+      li ===========
+    else 
+      li Array userList is empty

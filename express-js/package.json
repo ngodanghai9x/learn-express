@@ -1,0 +1,26 @@
+{
+  "name": "express-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "abc": "type: module => for use import export",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "dev": "nodemon --inspect index.js"
+  },
+  "author": "ngodanghai9x",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "lowdb": "^2.1.0",
+    "mongoose": "^5.13.2",
+    "multer": "^1.4.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

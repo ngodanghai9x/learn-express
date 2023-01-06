@@ -1,0 +1,12 @@
+extends ./layout
+
+block content
+  h2 Login
+  form(action="/auth/login" method="POST") 
+    .mb-3
+      label.form-label(for='Username') Username
+      input#Username.form-control(type='text'  name="username")
+    .mb-3
+      label.form-label(for='Password') Password
+      input#Password.form-control(type='password' name="password")
+    button.btn.btn-primary(type='submit') Login
