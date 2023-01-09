@@ -1,17 +1,17 @@
 {
   "name": "express-ts",
   "version": "1.0.0",
-  "description": "https://developer.okta.com/blog/2018/11/15/node-express-typescript",
+  "description": "",
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
     "copy-assets": "ts-node tools/copyAssets",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "yarn clean && yarn lint && yarn tsc && yarn copy-assets",
+    "prebuild": "yarn clean && yarn lint",
+    "build": "yarn tsc && yarn copy-assets",
     "dev:start": "yarn build && yarn start",
-    "dev": "nodemon --watch src -e ts,ejs --exec yarn dev:start",
+    "dev": "exit 1 && nodemon --watch src -e ts,ejs --exec yarn dev:start",
     "prestart": "yarn build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
