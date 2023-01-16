@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "ES2022",
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
@@ -15,6 +15,12 @@
     }
   },
   "include": [
+    "src/**/*",
     "src"
+  ],
+  "exclude": [
+    "src/public",
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }

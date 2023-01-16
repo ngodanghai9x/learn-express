@@ -10,6 +10,8 @@ const upload = multer() // for parsing multipart/form-data
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
+  console.log("🚀 ~ headers", req.headers)
+  console.log("🚀 ~ body", req.body)
   testController.testFunc().then(async ({ number, cb }) => {
     res.status(200).json({
       message: 'success',

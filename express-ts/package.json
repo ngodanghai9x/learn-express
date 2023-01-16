@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
-    "copy-assets": "ts-node tools/copyAssets",
+    "copy-assets": "ts-node tools/copyAssets.ts",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
     "prebuild": "yarn clean && yarn lint",
@@ -14,6 +14,7 @@
     "dev": "exit 1 && nodemon --watch src -e ts,ejs --exec yarn dev:start",
     "prestart": "yarn build",
     "start": "node .",
+    "debug": "yarn start --debug-brk",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ngodanghai9x",

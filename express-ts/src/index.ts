@@ -16,6 +16,7 @@ function setupSwagger(app: Application) {}
 function setupViewEngine(app: Application) {
   // Configure Express to use EJS
   app.set("views", join(__dirname, "views"));
+  // app.set("views", join(process.cwd(), "..", "views"));
   app.set("view engine", "ejs");
 }
 
@@ -24,9 +25,8 @@ setupSwagger(application);
 setupViewEngine(application);
 
 routes.register(application);
-
+debugger;
 // start the express server
 application.listen(port, host, () => {
-  // tslint:disable-next-line:no-console
-  console.log(`ExpressTs server running on http://${host}:${port}`);
+  console.log(`ExpressTS server running on http://${host}:${port}`);
 });

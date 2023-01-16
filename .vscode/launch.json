@@ -1,0 +1,65 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Express JS",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\express-js\\index.js",
+      "cwd": "${workspaceFolder}\\express-js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Express TS",
+      // "runtimeArgs": [
+      //   "start"
+      // ],
+      // "runtimeExecutable": "yarn",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "preLaunchTask": "",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [
+        "start"
+      ],
+      // "program": "${workspaceFolder}\\express-ts\\dist\\index.js",
+      // "program": "${workspaceFolder}\\express-ts\\src\\index.ts",
+      "cwd": "${workspaceFolder}\\express-ts\\src",
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach Express TS",
+      "port": 5858,
+      "address": "localhost",
+      "restart": false,
+      "sourceMaps": false,
+      "localRoot": "${workspaceFolder}\\express-ts",
+      "remoteRoot": null
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Express TS 2",
+      // "runtimeArgs": [
+      //   "start"
+      // ],
+      // "runtimeExecutable": "yarn",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "preLaunchTask": "",
+      // "program": "${workspaceFolder}\\express-ts\\dist\\index.js",
+      "program": "${workspaceFolder}\\express-ts\\src\\index.ts",
+      "cwd": "${workspaceFolder}\\express-ts\\src",
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import app from './app.js';
 const port = 1506;
 
 app.listen(port, () => {
-  console.log(`ExpressJs app listening at http://localhost:${port}`)
+  console.log(`ExpressJS app listening at http://localhost:${port}`)
 });
 
 

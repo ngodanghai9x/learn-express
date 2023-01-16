@@ -1,6 +1,8 @@
 import express, { NextFunction, Request, Response } from "express";
-import { ExceptionCode } from "src/common/constants";
-import { MyException } from "src/common/exceptions";
+// import { ExceptionCode } from "src/common/constants";
+// import { MyException } from "src/common/exceptions";
+import { ExceptionCode } from "../common/constants";
+import { MyException } from "../common/exceptions";
 
 export const requireJwtAuth = (
   req: Request,
@@ -44,7 +46,7 @@ export const handleException = (
 
   if (APP_ENV === "dev") {
     return res.status(exception.code).json({
-      message: exception.message || exception.sqlMessage,
+      message: exception.message || exception._sqlMessage,
     });
   }
 
